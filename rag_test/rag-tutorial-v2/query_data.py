@@ -40,7 +40,7 @@ def query_rag(query_text: str):
     prompt = prompt_template.format(context=context_text, question=query_text)
     # print(prompt)
 
-    model = Ollama(model="llama3.2",num_gpu=1)
+    model = Ollama(model="llama3.2:3b",num_gpu=1)
     
     response_text = model.invoke(prompt)
 
